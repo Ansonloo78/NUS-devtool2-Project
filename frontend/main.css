@@ -1,0 +1,225 @@
+body {
+    background: #eee
+}
+
+.card {
+    background-color: #fff;
+    width: 280px;
+    border-radius: 28px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.image {
+    border-radius: 50%
+}
+
+.welcome {
+    font-size: 9px;
+    position: relative;
+    top: 5px;
+    font-weight: 500;
+    color: #7e7e7e
+}
+
+.name {
+    font-size: 12px;
+    font-weight: 500;
+    color: #282828
+}
+
+.debit {
+    background-color: #000;
+    border-radius: 12px;
+    width: 244px
+}
+
+.black {
+    color: #c5c5c5;
+    font-size: 12px
+}
+
+.star {
+    color: #e4e4e4;
+    font-size: 12px
+}
+
+.number {
+    color: #e4e4e4;
+    font-size: 12px;
+    font-weight: 500
+}
+
+.balance {
+    font-size: 12px;
+    color: #c5c5c5;
+    font-weight: 400;
+    position: relative;
+    top: 38px
+}
+
+.fifty {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff
+}
+
+.dollar {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fdfdfd
+}
+
+.dot {
+    font-size: 15px;
+    font-weight: 500;
+    color: grey
+}
+
+.transfer {
+    font-size: 13px;
+    font-weight: bold;
+    color: #2c2c2c
+}
+
+.curve {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 30px;
+    height: 30px;
+    text-align: center
+}
+
+.add {
+    font-size: 16px;
+    font-weight: bold
+}
+
+.model {
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.trans {
+    font-size: 13px;
+    font-weight: bold;
+    color: #2c2c2c
+}
+
+.view {
+    font-size: 10px;
+    font-weight: 500;
+    color: #828282
+}
+
+.flightout {
+    width: 40px;
+    height: 40px;
+    border-radius: 9px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.flight {
+    border-radius: 50%;
+    background-color: #fdebd2;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center
+}
+
+.flighttxt {
+    font-size: 12px;
+    color: #464646;
+    font-weight: 500
+}
+
+.yesterday {
+    font-size: 10px;
+    font-weight: 500;
+    color: #c3c3c3
+}
+
+.minus {
+    font-size: 15px;
+    font-weight: 600;
+    color: #252525
+}
+
+.five {
+    font-size: 11px !important;
+    font-weight: bold;
+    color: #000
+}
+
+.knife {
+    font-size: 16px !important;
+    font-weight: lighter
+}
+
+.scroll {
+    overflow-y: scroll;
+    height: 350px;
+    scroll-behavior: smooth
+}
+
+.scroll::-webkit-scrollbar {
+    display: none;
+    scroll-behavior: smooth
+}
+
+.home {
+    font-size: 12px;
+    font-weight: 500;
+    color: #404040;
+    position: relative;
+    top: 5px
+}
+
+.dot1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    position: relative;
+    right: 19px;
+    top: 7px
+}
+
+.calender {
+    font-size: 15px !important
+}
+
+.curve2 {
+    width: 37px;
+    height: 37px;
+    border-radius: 12px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.downplus {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    top: 1px
+}
+
+.dot2 {
+    font-size: 19px;
+    font-weight: bold;
+    color: red;
+    position: relative;
+    bottom: 11px;
+    right: 5px
+}
+
+.cog {
+    font-size: 15px !important;
+    position: relative;
+    bottom: 2.5px
+}
