@@ -81,6 +81,20 @@ router.get("/account/by-uid", (request, response) => {
     );
 });
 
+router.put("/account/update/by-id", (request, response) => {
+    database.connection.query(
+      `update account set a_balance = '${request.body.new_a_balance}' where account_id = ${request.body.id}`,
+      (error, result) => {
+        if (error) {
+          console.log(error);
+          response.status(500).send("Some error occurred at the Backend.");
+        } else {
+          response.status(200).send("Updated successfully!");
+        }
+      }
+    );
+  });
+
 module.exports = {
     router,
 };

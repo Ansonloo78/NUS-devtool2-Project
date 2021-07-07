@@ -4,7 +4,8 @@ CREATE TABLE account(
     ,user_id      INTEGER  NOT NULL
     ,account_no   VARCHAR(20) NOT NULL
     ,account_type VARCHAR(10) NOT NULL
-    ,a_balance    VARCHAR(255) NOT NULL
+    ,a_balance    NUMERIC(7,2) NOT NULL
     ,ccard_id     INTEGER  NOT NULL
     ,c_balance    NUMERIC(7,2) NOT NULL
 );
+

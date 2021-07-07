@@ -27,3 +27,5 @@ insert into transaction (trans_id,account_id,trans_amount)
 values (1,2,'300');
 insert into transaction (trans_id,account_id,trans_amount)
 values (2,2,'300');
+
+select*from account

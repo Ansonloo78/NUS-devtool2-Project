@@ -36,6 +36,34 @@ router.get("/user/by-uid", (request, response) => {
     );
 });
 
+router.put("/user/update/by-id", (request, response) => {
+    database.connection.query(
+      `update user set mobile = '${request.body.new_mobile}' where id = ${request.body.id}`,
+      (error, result) => {
+        if (error) {
+          console.log(error);
+          response.status(500).send("Some error occurred at the Backend.");
+        } else {
+          response.status(200).send("Updated successfully!");
+        }
+      }
+    );
+  });
+
+  router.delete("/user/delete/by-id", (request, response) => {
+    database.connection.query(
+      `delete from user where id = ${request.query.id}`,
+      (error, result) => {
+        if (error) {
+          console.log(error);
+          response.status(500).send("Some error occurred at the Backend.");
+        } else {
+          response.status(200).send("Deleted successfully!");
+        }
+      }
+    );
+  });
+
 module.exports = {
     router,
 };
