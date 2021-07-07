@@ -52,13 +52,27 @@ router.put("/user/update/by-id", (request, response) => {
 
   router.delete("/user/delete/by-id", (request, response) => {
     database.connection.query(
-      `delete from user where id = ${request.query.id}`,
+      `delete from user where user_id = ${request.query.id}`,
       (error, result) => {
         if (error) {
           console.log(error);
           response.status(500).send("Some error occurred at the Backend.");
         } else {
           response.status(200).send("Deleted successfully!");
+        }
+      }
+    );
+  });
+
+  router.post("/user/add", (request, response) => {
+    database.connection.query(
+      `insert into user (nric, first_name, last_name, email, mobile, password) values ('${request.body.nric}', '${request.body.f_name}', '${request.body.l_name}', '${request.body.email}', '${request.body.mobile}', '${request.body.password}')`,
+      (error, result) => {
+        if (error) {
+          console.log(error);
+          response.status(500).send("Some error occurred at the Backend.");
+        } else {
+          response.status(200).send("New user created successfully!");
         }
       }
     );
