@@ -60,7 +60,7 @@ router.get("/account/by-aid", (request, response) => {
 // Define a mapping for a GET request on API path /account/by-uid
 // to an arrow function which requires a parameter named id from the request
 // and calls a mysql query and populates the response with the data.
-router.get("/account/by-uid", (request, response) => {
+let getAccount = router.get("/account/by-uid", (request, response) => {
     if (request.query.id.length === 0 || isNaN(request.query.id)) {
         console.log(`Invalid ID received. ID: ${request.query.id}`);
         response.status(400).send("Invalid ID received.");
@@ -80,6 +80,14 @@ router.get("/account/by-uid", (request, response) => {
         }
     );
 });
+
+// function init() { // Initialises the page on first load and subsequent resets
+//     // document.getElementByID('ccID').innerHTML = '';
+//     document.getElementByID('ccID').innerHTML = 'getAccount.ccard_id';
+//   }
+  
+//   init();
+//   b1.addEventListener('click',init);
 
 router.put("/account/update/by-id", (request, response) => {
     database.connection.query(

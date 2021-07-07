@@ -21,14 +21,14 @@ body {
 }
 
 .container {
-  background-color: #58df85;
+  background-color: #0eabe9;
   margin: 30px auto;
   width: 350px;
 }
 
 .btn {
     cursor: pointer;
-    background-color: #9c88ff;
+    background-color: #2a0faf;
     box-shadow: var(--box-shadow);
     color: #fff;
     border: 0;

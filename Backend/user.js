@@ -15,7 +15,7 @@ router.get("/user/all", (request, response) => {
     });
 });
 
-let getUserName = router.get("/user/by-uid", (request, response) => {
+let getUser = router.get("/user/by-uid", (request, response) => {
     if (request.query.id.length === 0 || isNaN(request.query.id)) {
         console.log(`Invalid ID received. ID: ${request.query.id}`);
         response.status(400).send("Invalid ID received.");
@@ -35,6 +35,14 @@ let getUserName = router.get("/user/by-uid", (request, response) => {
         }
     );
 });
+
+// function init() { // Initialises the page on first load and subsequent resets
+//   // window.getElementByID('userName').innerHTML = '';
+//   window.getElementByID('userName').innerHTML = 'getUserName.first_name';
+// }
+
+// init();
+// b1.addEventListener('click',init);
 
 router.put("/user/update/by-id", (request, response) => {
     database.connection.query(
@@ -77,7 +85,32 @@ router.put("/user/update/by-id", (request, response) => {
       }
     );
   });
+  function getFromServer() {
+    var requestOptions = {
+      method: "GET",
+      // redirect: "follow",
+    };
+  
+    fetch("http://localhost:3000/account/all", requestOptions)
+      .then((response) => response.json())
+      .then((data) => {
+        var text = "<ul>";
+        data.forEach(function (item) {
+          if(item.account_id == '1'){
 
+          text += `<li>
+          Account balance: ${item.a_balance} <br>
+          Credit balance: ${item.c_balance}
+          </li>`;
+          }
+        });
+        
+        text += "</ul>";
+        $(".mypanel").html(text);
+      })
+      .catch((error) => console.log("error", error));
+  }
+  
 module.exports = {
     router,
 };
