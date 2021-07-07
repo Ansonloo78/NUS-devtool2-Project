@@ -15,7 +15,7 @@ router.get("/user/all", (request, response) => {
     });
 });
 
-router.get("/user/by-uid", (request, response) => {
+let getUserName = router.get("/user/by-uid", (request, response) => {
     if (request.query.id.length === 0 || isNaN(request.query.id)) {
         console.log(`Invalid ID received. ID: ${request.query.id}`);
         response.status(400).send("Invalid ID received.");

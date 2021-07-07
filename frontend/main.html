@@ -11,9 +11,9 @@
         <div class="d-flex justify-content-between px-3 align-items-center border-bottom"> <span><i class="fa fa-bars"></i></span>
             <div class="d-flex justify-content-center align-items-center">
                 <div class="pr-2 text-right"> <span class="welcome">Welcome</span>
-                    <p class="name">//change at backend</p>
+                    <p class="name">${getUserName.first_name}</p>
                 </div>
-                <div> <img src="https://i.imgur.com/AgAC1Is.jpg" width="30" class="image"> </div>
+                <!-- <div> <img src="https://i.imgur.com/AgAC1Is.jpg" width="30" class="image"> </div> -->
             </div>
         </div>
         <div class="scroll">
@@ -26,10 +26,29 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center text-center"><span class="dot">. . .</span></div>
-            <div class="px-3"><span class="transfer">Transfer To</span></div>
+            <div class="px-3"><span class="transfer">Transfer From</span></div>
             <div class="d-flex justify-content-between align-items-center px-3 pt-2">
-                <div class="curve"><span class="add">+</span></div> <img src="https://i.imgur.com/x9e2pFy.jpg" class=" model"> <img src="https://i.imgur.com/i0kYdyn.jpg" class="model"> <img src="https://i.imgur.com/UzgsqH0.jpg" class="model"> <img src="https://i.imgur.com/Xn9uDwK.jpg" class="model">
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Select A/C
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">${getAccount.account_type}</a></li>
+                    </ul>
+                </div>
             </div>
+            <div class="px-3"><span class="transfer">Transfer To</span></div>
+                <div class="d-flex justify-content-between align-items-center px-3 pt-2">
+                  <div class="dropdown">
+                    <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Select Credit Card
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Credit</a></li>
+                    </ul>
+                  </div>
+                <!-- <div class="curve"><span class="add">+</span></div> <img src="https://i.imgur.com/x9e2pFy.jpg" class=" model"> <img src="https://i.imgur.com/i0kYdyn.jpg" class="model"> <img src="https://i.imgur.com/UzgsqH0.jpg" class="model"> <img src="https://i.imgur.com/Xn9uDwK.jpg" class="model"> -->
+                </div>
             <div class="pt-4 px-3 d-flex justify-content-between align-items-center"> <span class="trans">Transactions</span> <span class="view">VIEW ALL</span> </div>
             <div class="d-flex justify-content-between align-items-center px-3 pt-2">
                 <div class="d-flex justify-content-center">
