@@ -39,7 +39,18 @@ function checkForm(e) {
     form.pwd1.focus();
     return false;
   }
+  console.log('Finish checkForm here');
   return true;
+}
+
+function process(noIssue) {
+  // console.log('is the checkform ok?' + noIssue?'true':'false');
+  if(noIssue == true) 
+  {
+    console.log('checkForm return true');
+    // location.replace("main.html")
+  }
+  else console.log('checkForm return false');
 }
 
 form.addEventListener("submit", checkForm);
